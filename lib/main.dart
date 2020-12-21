@@ -66,6 +66,61 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  Container textFieldMethod() {
+    return Container(
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            BoxShadow(
+                blurRadius: 10.0,
+                color: Colors.grey[350],
+                // spreadRadius: 4.0,
+                offset: Offset(0.5, 4))
+            // BoxShadow(
+            //     color: Color.fromRGBO(225, 95, 27, .3),
+            //     blurRadius: 20,
+            //     offset: Offset(0, 10))
+          ]),
+      child: Column(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                border: Border(bottom: BorderSide(color: Colors.grey[200]))),
+            child: TextField(
+              decoration: InputDecoration(
+                  suffixIcon: Icon(
+                    Icons.phone_android_outlined,
+                    color: Colors.grey[500], //Colors.orange[600],
+                    size: 28,
+                  ),
+                  hintText: "Email or Phone number",
+                  hintStyle: TextStyle(color: Colors.grey),
+                  border: InputBorder.none),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                border: Border(bottom: BorderSide(color: Colors.grey[200]))),
+            child: TextField(
+              decoration: InputDecoration(
+                  suffixIcon: Icon(
+                    Icons.lock_outline_rounded,
+                    color: Colors.grey[500],
+                    size: 28,
+                  ),
+                  hintText: "Password",
+                  hintStyle: TextStyle(color: Colors.grey),
+                  border: InputBorder.none),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   Column newMethod() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -96,6 +151,10 @@ class _MyHomePageState extends State<MyHomePage> {
             fontSize: 40,
           ),
         ),
+        SizedBox(
+          height: 25,
+        ),
+        textFieldMethod(),
         SizedBox(
           height: 25,
         ),
