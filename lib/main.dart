@@ -28,35 +28,37 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: BgColor,
-      body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                margin: const EdgeInsets.all(10),
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                decoration: BoxDecoration(
-                    color: BgMainCard,
-                    borderRadius: BorderRadius.all(Radius.circular(45)),
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 15.0,
-                        color: BgMainBlur,
-                        spreadRadius: 5.0,
-                      )
-                    ]),
-                child: newMethod(),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              _lightListTile(),
-              SizedBox(
-                height: 20.0,
-              ),
-            ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  margin: const EdgeInsets.all(8),
+                  padding: const EdgeInsets.symmetric(horizontal: 18),
+                  decoration: BoxDecoration(
+                      color: BgMainCard,
+                      borderRadius: BorderRadius.all(Radius.circular(45)),
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 15.0,
+                          color: BgMainBlur,
+                          spreadRadius: 5.0,
+                        )
+                      ]),
+                  child: newMethod(),
+                ),
+                SizedBox(
+                  height: 15.0,
+                ),
+                _lightListTile(),
+                SizedBox(
+                  height: 15.0,
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -69,11 +71,11 @@ class _MyHomePageState extends State<MyHomePage> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         SizedBox(
-          height: 20.0,
+          height: 15.0,
         ),
         _customAppBar(),
         SizedBox(
-          height: 30,
+          height: 15,
         ),
         Text(
           'This Week',
@@ -95,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         SizedBox(
-          height: 40,
+          height: 25,
         ),
         Container(
           decoration: BoxDecoration(
@@ -215,12 +217,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         title: Text(
           _title,
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
         ),
         subtitle: Text(
           _subtitle,
           style: TextStyle(
-              fontSize: 16,
+              fontSize: 14,
               fontWeight: FontWeight.w300,
               color: Colors.grey[450]),
         ),
